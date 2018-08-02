@@ -10,7 +10,7 @@ This is wrapper of __[Node_redis](https://github.com/NodeRedis/node_redis)__ by 
 
 ## Install
 
-npm install redispool
+npm install redispool-js
 
   
 
@@ -34,7 +34,7 @@ npm install redispool
 
 ```js
 
-var  RedisPool  =  require('redispool');
+var  RedisPool  =  require('redispool-js');
 
   
 

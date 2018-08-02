@@ -1,5 +1,5 @@
 {
-  "name": "redispool",
+  "name": "redispool-js",
   "version": "1.0.0",
   "description": "wrapper nodejs redis client which pooling many connections",
   "main": "index.js",
