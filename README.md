@@ -43,19 +43,11 @@ var  RedisPool  =  require('redispool-js');
 //Just add `maxConnections` to create number of RedisClient in pool
 
 RedisPool.init({
-
-port:  6379,
-
-host:  'localhost',
-
-options: {},
-
-// password: '',
-
-maxConnections:  50,
-
-handleRedisError:  true
-
+    port:  6379,
+    host:  'localhost',
+    options: {},
+    maxConnections:  50,
+    handleRedisError:  true
 })
 
 ```
@@ -75,7 +67,6 @@ Eg:
 ```js
 
 await  RedisPool.setAsync('something','some value');
-
 let  value  =  await  RedisPool.getAsync('something');
 
 ```
