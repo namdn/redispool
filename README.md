@@ -3,7 +3,7 @@
 redispool - an Asynchronous node.js redis pool client
 ===========================
 
-This is wrapper of __[Node_redis](https://github.com/NodeRedis/node_redis)__  by pooling a lot of  __redis__ client.
+This is wrapper of __[Node_redis](https://github.com/NodeRedis/node_redis)__  by pooling a lot of  **RedisClient** connections to increase performance.
 
 ## Install
     
@@ -11,8 +11,8 @@ This is wrapper of __[Node_redis](https://github.com/NodeRedis/node_redis)__  by
 
 ## Dependencies
     
- - bluebird
- - node_redis
+ - **bluebird**
+ - **node_redis**
 
 
 ## Usage 
@@ -24,7 +24,7 @@ This is wrapper of __[Node_redis](https://github.com/NodeRedis/node_redis)__  by
 var  redispool  =  require('redispool');
 
 //call init which the same option of construction of RedisClient. 
-//Just add `maxConnections` to create number of RedisClients in pool
+//Just add `maxConnections` to create number of RedisClient in pool
 redispool.init({
 	port:  6379,
 	host:  'localhost',
@@ -34,9 +34,19 @@ redispool.init({
 	handleRedisError:  true
 })
 ```
+After calling `init`, redispool create `maxConnections` connnection ready to use.
+
 ### API
 
-We use __blubird__ to  `promisify` all __redis api__ functions. So all functions are **redis api** function adding *Async* to the end. See [Redis api](https://github.com/NodeRedis/node_redis#api) for more information.
+We use __blubird__ to  `promisify` all __redis api__ functions. So all functions are **redis api** [async|await]  function adding *Async* to the end. See [Redis api](https://github.com/NodeRedis/node_redis#api) for more information.
+Eg:
+
+```js
+	await redispool.setAsync('something','some value');
+    let value = await redispool.getAsync('something');    
+```
+
+When calling command function, `readispool` pop a free `RedisClient` connection, using it to query command and then push back it to the pool.
 
 ## License
 
