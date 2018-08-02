@@ -42,7 +42,7 @@ We use __blubird__ to  `promisify` all __redis api__ functions. So all functions
 Eg:
 
 ```js
-	await redispool.setAsync('something','some value');
+    await redispool.setAsync('something','some value');
     let value = await redispool.getAsync('something');    
 ```
 
