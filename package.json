@@ -1,0 +1,30 @@
+{
+  "name": "redispool",
+  "version": "1.0.0",
+  "description": "wrapper nodejs redis client which pooling many connections",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namdn/redispool.git"
+  },
+  "keywords": [
+    "redis",
+    "redis-client",
+    "client",
+    "pool",
+    "wrapper"
+  ],
+  "author": "dinhnhonam@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/namdn/redispool/issues"
+  },
+  "homepage": "https://github.com/namdn/redispool#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "redis": "^2.8.0"
+  }
+}
