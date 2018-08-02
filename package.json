@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/namdn/redispool.git"
+    "url": "git+https://github.com/namdn/redispool-js.git"
   },
   "keywords": [
     "redis",
@@ -20,9 +20,9 @@
   "author": "dinhnhonam@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/namdn/redispool/issues"
+    "url": "https://github.com/namdn/redispool-js/issues"
   },
-  "homepage": "https://github.com/namdn/redispool#readme",
+  "homepage": "https://github.com/namdn/redispool-js#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
     "redis": "^2.8.0"
