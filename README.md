@@ -36,10 +36,8 @@ npm install redispool-js
 
 var  RedisPool  =  require('redispool-js');
 
-  
 
 //call init which the same option of construction of RedisClient.
-
 //Just add `maxConnections` to create number of RedisClient in pool
 
 RedisPool.init({
