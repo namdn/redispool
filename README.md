@@ -1,8 +1,4 @@
-﻿
-  
-  
-
-redispool - an Asynchronous node.js redis pool client
+﻿RedisPool - an Asynchronous node.js redis pool client
 
 ===========================
 
